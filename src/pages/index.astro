@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import gearImage from "../images/electricreview.jpg";
 ---
 
 <Layout title='Home | Musically-Equipped'>
@@ -10,6 +11,24 @@ import Layout from "../layouts/Layout.astro";
       Musically-Equipped
     </h1>
   </div>
+  <section>
+    <div class='container flex flex-col-reverse md:flex-row mx-auto'>
+      <div class='p-10'>
+        <img src={gearImage} alt='' />
+      </div>
+      <div
+        class='flex flex-col px-3 space-y-3 py-3 justify-center text-center mx-auto'
+      >
+        <p class='text-yellow-500 font-semibold text-xl'>Welcom to</p>
+        <h2 class='text-yellow-500 text-3xl font-bold'>Musically Equipped</h2>
+        <p class='leading-8'>
+          Finding the right musical gear at an affordable price can be a
+          challenge. We're here to make that challenge a little easier with
+          tips, reviews and how-to's
+        </p>
+      </div>
+    </div>
+  </section>
 </Layout>
 <style>
   .hero {
