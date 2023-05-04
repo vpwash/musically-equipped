@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title='Blog | Musically Equipped'>
+  <div class='hero py-36 bg-slate-700'>
+    <h1
+      class='text-5xl text-center text-white drop-shadow-md font-bold bg-yellow-500 py-3'
+    >
+      Blog
+    </h1>
+  </div>
+
+  <section>
+    <ul>
+      <li><a href='/posts/buying-your-first-guitar'>Buying First Guitar</a></li>
+    </ul>
+  </section>
+</Layout>
+<style>
+  .hero {
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+  }
+</style>

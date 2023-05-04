@@ -1,13 +1,17 @@
 ---
-const { image, title, description } = Astro.props;
+const { image, title, description, url, alt } = Astro.props;
 ---
 
 <div class='bg-white rounded-lg shadow-lg w-fit'>
-  <img src={image} alt='' class='rounded-t-lg object-cover' />
+  <a href={url}><img src={image} alt={alt} class='rounded-t-lg object-cover' /></a>
   <div class='p-6'>
-    <h2 class='font-bold mb-2 text-2xl text-yellow-500'>Music Gear Article</h2>
-    <p class='mb-2'>This is an awesome description!</p>
-    <a href='#' class='text-yellow-500 hover:text-purple-500 underline text-sm'
+    <a href={url}
+      ><h2 class='font-bold mb-2 text-2xl text-yellow-500'>{title}</h2></a
+    >
+    <p class='mb-2'>{description}</p>
+    <a
+      href={url}
+      class='text-yellow-500 hover:text-purple-500 underline text-sm'
       >Read More</a
     >
   </div>
