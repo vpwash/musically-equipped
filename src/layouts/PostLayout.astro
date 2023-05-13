@@ -1,0 +1,11 @@
+---
+import Layout from "../layouts/Layout.astro";
+import mainPostImg from "../images/electricreview.jpg";
+const imageAlt = "Blog picture";
+---
+
+<Layout>
+  <div class='flex flex-col container p-10 mx-auto py-[80%] w-4/6'>
+    <img class='w-98' src={mainPostImg} alt={imageAlt} />
+  </div>
+</Layout>

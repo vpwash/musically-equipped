@@ -7,6 +7,7 @@ image:
   url: "../../images/acoustic-guitar.jpg"
   alt: "An acoustic guitar."
 tags: ["guitar", "beginner", "gear"]
+isFeatured: true
 ---
 
 # Buying Your First Guitar

@@ -3,16 +3,11 @@ import Layout from "../layouts/Layout.astro";
 import gearImage from "../images/keyboards.jpg";
 import Card from "../components/Card.astro";
 import guitarImage from "../images/electricreview.jpg";
+import Hero from "../components/Hero.astro";
 ---
 
 <Layout title='Home | Musically-Equipped'>
-  <div class='hero py-36 bg-slate-700'>
-    <h1
-      class='text-5xl text-center text-white drop-shadow-md font-bold bg-yellow-500 py-3'
-    >
-      Musically-Equipped
-    </h1>
-  </div>
+  <Hero title='Musically-Equipped' />
   <section>
     <div
       class='max-w-screen-xl container flex flex-col-reverse md:flex-row mx-auto'
@@ -55,11 +50,4 @@ import guitarImage from "../images/electricreview.jpg";
     </div>
   </section>
 </Layout>
-<style>
-  .hero {
-    background-image: url("../images/header.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
-  }
-</style>
+
