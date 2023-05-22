@@ -1,5 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
+let res = await fetch("https://norian.studio/wp-json/wp/v2/dinos")
+let posts = await res.json();
 ---
 
 <Layout title='Blog | Musically Equipped'>
@@ -12,9 +14,17 @@ import Layout from "../layouts/Layout.astro";
   </div>
 
   <section>
-    <ul>
-      <li><a href='/posts/buying-your-first-guitar'>Buying First Guitar</a></li>
-    </ul>
+   <h1>List of Dinosaurs</h1>
+    {
+      posts.map((post) => (
+        <article>
+          <h2>
+            <a href={`/posts/${post.slug}/`} set:html={post.title.rendered} />
+          </h2>
+          <Fragment set:html={post.content.rendered} />
+        </article>
+      ))
+    }
   </section>
 </Layout>
 <style>
