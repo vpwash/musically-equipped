@@ -1,5 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import PostLayout from '../../layouts/PostLayout.astro'
 
 const { slug } = Astro.params;
 
@@ -18,11 +19,11 @@ export async function getStaticPaths() {
   }));
 }
 ---
+<PostLayout title={post.title.rendered}
 
-<Layout title={post.title.rendered}>
-  <article>
-    <img src={post._embedded['wp:featuredmedia'][0].source_url} alt='' />
-    <h1 set:html={post.title.rendered} />
-    <Fragment set:html={post.content.rendered} />
-  </article>
+image={post._embedded['wp:featuredmedia'][0].source_url}
+
+>
+<Fragment set:html={post.content.rendered} />
+
 </Layout>
