@@ -1,0 +1,67 @@
+---
+<<<<<<< HEAD
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Card from '../components/Card.astro';
+let res = await fetch('https://contentmedia.dev/wp-json/wp/v2/posts?_embed');
+=======
+import Layout from "../layouts/Layout.astro";
+let res = await fetch("https://norian.studio/wp-json/wp/v2/dinos")
+>>>>>>> ba595185e39ea854816b0d7ac59590ce55217aa4
+let posts = await res.json();
+---
+
+<Layout title='Blog | Musically Equipped'>
+<<<<<<< HEAD
+  <Hero title='Blog page' />
+
+  <section>
+    <div class='container flex flex-col md:flex-row mx-auto my-10 space-x-5'>
+      {
+        posts.map((post) => (
+          <Card
+            title={post.title.rendered}
+            image={
+              post._embedded['wp:featuredmedia'][0].media_details.sizes
+                .medium_large.source_url
+            }
+            url={`/posts/${post.slug}/`}
+            description={post.excerpt.rendered}
+          />
+        ))
+      }
+    </div>
+  </section>
+</Layout>
+=======
+  <div class='hero py-36 bg-slate-700'>
+    <h1
+      class='text-5xl text-center text-white drop-shadow-md font-bold bg-yellow-500 py-3'
+    >
+      Blog
+    </h1>
+  </div>
+
+  <section>
+   <h1>List of Dinosaurs</h1>
+    {
+      posts.map((post) => (
+        <article>
+          <h2>
+            <a href={`/posts/${post.slug}/`} set:html={post.title.rendered} />
+          </h2>
+          <Fragment set:html={post.content.rendered} />
+        </article>
+      ))
+    }
+  </section>
+</Layout>
+<style>
+  .hero {
+    background-image: url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+  }
+</style>
+>>>>>>> ba595185e39ea854816b0d7ac59590ce55217aa4
