@@ -1,17 +1,11 @@
 ---
-<<<<<<< HEAD
 import Layout from '../layouts/Layout.astro';
 import gearImage from '../images/keyboards.jpg';
 import Card from '../components/Card.astro';
-import guitarImage from '../images/electricreview.jpg';
+
 import Hero from '../components/Hero.astro';
-=======
-import Layout from "../layouts/Layout.astro";
-import gearImage from "../images/keyboards.jpg";
-import Card from "../components/Card.astro";
-import guitarImage from "../images/electricreview.jpg";
-import Hero from "../components/Hero.astro";
->>>>>>> ba595185e39ea854816b0d7ac59590ce55217aa4
+let res = await fetch('https://contentmedia.dev/wp-json/wp/v2/posts?_embed');
+let posts = await res.json();
 ---
 
 <Layout title='Home | Musically-Equipped'>
@@ -37,32 +31,22 @@ import Hero from "../components/Hero.astro";
     </div>
   </section>
   <section id='featured-post'>
-<<<<<<< HEAD
-    <div class='container flex flex-wrap mx-auto my-10 space-x-5 space-y'>
-=======
-    <div
-      class='mx-auto max-w-screen-xl grid grid-cols-1 grid-row-3 md:grid-cols-3 md:grid-row-1 gap-6 py-6 px-10'
-    >
->>>>>>> ba595185e39ea854816b0d7ac59590ce55217aa4
-      <Card
-        image={guitarImage}
-        title='Buying Your First Guitar'
-        description='Buying your first guitar can be fun and tricky.'
-      />
-      <Card
-        image={guitarImage}
-        title='Buying Your First Guitar'
-        description='Buying your first guitar can be fun and tricky.'
-      />
-      <Card
-        image={guitarImage}
-        title='Buying Your First Guitar'
-        description='Buying your first guitar can be fun and tricky.'
-      />
+    <section>
+    <div class='container flex flex-col md:flex-row mx-auto my-10 space-x-5'>
+      {
+        posts.map((post) => (
+          <Card
+            title={post.title.rendered}
+            image={
+              post._embedded['wp:featuredmedia'][0].media_details.sizes
+                .medium_large.source_url
+            }
+            url={`/posts/${post.slug}/`}
+            description={post.excerpt.rendered}
+          />
+        ))
+      }
     </div>
   </section>
+  </section>
 </Layout>
-<<<<<<< HEAD
-=======
-
->>>>>>> ba595185e39ea854816b0d7ac59590ce55217aa4
