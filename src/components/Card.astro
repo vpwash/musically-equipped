@@ -1,0 +1,28 @@
+---
+const { image, title, description, url, alt } = Astro.props;
+---
+
+<div class='bg-white rounded-lg shadow-lg lg:w-1/3 overflow-hidden'>
+  <a href={url}
+    ><img
+      src={image}
+      alt={alt}
+      class='rounded-t-lg object-cover w-full h-64 hover:scale-105 transition ease-in delay-150'
+    /></a
+  >
+  <div class='p-6'>
+    <a href={url}
+      ><h2
+        class='font-bold mb-2 text-2xl text-yellow-500 hover:text-yellow-300'
+      >
+        {title}
+      </h2></a
+    >
+    <p class='mb-2' set:html={description} />
+    <a
+      href={url}
+      class='text-yellow-500 hover:text-yellow-300 underline text-sm'
+      >Read More</a
+    >
+  </div>
+</div>

@@ -1,4 +1,4 @@
-<div class='hidden fixed bottom-0 bg-slate-700 items-center' id='cookie'>
+<div class='fixed bottom-0 bg-slate-700 items-center' id='cookie'>
   <div class='contaier mx-auto flex flex-col'>
     <p class='text-white text-center py-3 px-10 w-3/4 mx-auto'>
       We use cookies and similar technologies that are necessary to operate the
@@ -22,11 +22,17 @@
   const cookieContainer = document.querySelector("#cookie");
   const agreeBtn = document.querySelector("#agree");
 
-  setTimeout(() => {
-    cookieContainer.classList.remove("hidden");
-  }, 1000);
-
   agreeBtn.addEventListener("click", () => {
-    cookieContainer.classList.add("hidden");
+    document.cookie =
+      "CookieBy=Musically-Equipped; max-age" + 60 * 60 * 24 * 30;
+    if (document.cookie) {
+      cookieContainer.classList.add("hidden");
+    } else {
+      alert("Cookie cannot be set!");
+    }
   });
+  let checkCookie = document.cookie.indexOf("CookieBy=Musically-Equipped");
+  checkCookie != -1
+    ? cookieContainer.classList.add("hidden")
+    : cookieContainer.classList.remove("hidden");
 </script>
