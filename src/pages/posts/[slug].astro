@@ -1,4 +1,5 @@
 ---
+<<<<<<< HEAD
 import Layout from '../../layouts/Layout.astro';
 
 const { slug } = Astro.params;
@@ -17,11 +18,22 @@ export async function getStaticPaths() {
     props: { post: post },
   }));
 }
+=======
+import Layout from "../../layouts/Layout.astro";
+
+const { slug } = Astro.params;
+
+let res = await fetch(`https://norian.studio/wp-json/wp/v2/dinos?slug=${slug}`);
+let [post] = await res.json();
+>>>>>>> ba595185e39ea854816b0d7ac59590ce55217aa4
 ---
 
 <Layout title={post.title.rendered}>
   <article>
+<<<<<<< HEAD
     <img src={post._embedded['wp:featuredmedia'][0].source_url} alt='' />
+=======
+>>>>>>> ba595185e39ea854816b0d7ac59590ce55217aa4
     <h1 set:html={post.title.rendered} />
     <Fragment set:html={post.content.rendered} />
   </article>
