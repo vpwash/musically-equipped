@@ -1,6 +1,6 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import PostLayout from '../../layouts/PostLayout.astro'
+import PostLayout from '../../layouts/PostLayout.astro';
 
 const { slug } = Astro.params;
 
@@ -9,21 +9,13 @@ let res = await fetch(
 );
 let [post] = await res.json();
 
-export async function getStaticPaths() {
-  let data = await fetch('https://contentmedia.dev/wp-json/wp/v2/posts');
-  let posts = await data.json();
-
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: { post: post },
-  }));
-}
+let data = await fetch('https://contentmedia.dev/wp-json/wp/v2/posts');
+let posts = await data.json();
 ---
-<PostLayout title={post.title.rendered}
 
-image={post._embedded['wp:featuredmedia'][0].source_url}
-
+<PostLayout
+  title={post.title.rendered}
+  image={post._embedded['wp:featuredmedia'][0].source_url}
 >
-<Fragment set:html={post.content.rendered} />
-
-</Layout>
+  <Fragment set:html={post.content.rendered} />
+</PostLayout>
