@@ -11,7 +11,7 @@ tags:
   - beginner
   - gear
 image:
-  url: ../images/acoustic-guitar.jpg
+  url: ../images/acoustic-guitar.webp
   alt: An acoustic guitar.
 description: Buying your first guitar is an exciting and memorable experience,
   but it can be overwhelming for beginners. Here are a few tips to get you
