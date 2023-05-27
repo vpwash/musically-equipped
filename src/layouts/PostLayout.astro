@@ -1,19 +1,19 @@
 ---
 import Layout from '../layouts/Layout.astro';
-const { title, image, alt } = Astro.props;
+const { frontmatter } = Astro.props;
 ---
 
-<Layout title={title}>
+<Layout title={frontmatter.title} metaTitle={frontmatter.metaTitle}>
   <div class='flex flex-col container w-98 py-10 px-10 md:px-40 mx-auto'>
     <img
-      class='rounded-md md:w-max'
-      src={image}
-      alt={alt}
+      class='rounded-md md:w-lg'
+      src={frontmatter.image}
+      alt={frontmatter.imageAlt}
     />
     <h1
       class='text-yellow-500 text-center font-bold text-3xl md:text-5xl py-10'
     >
-      {title}
+      {frontmatter.title}
     </h1>
   </div>
   <section
