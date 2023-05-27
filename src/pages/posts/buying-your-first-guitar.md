@@ -2,9 +2,15 @@
 layout: ../../layouts/PostLayout.astro
 pubDate: 2023-04-04
 author: Phil Washburn
-title: Buying Your First Guitar
-date: 2023-05-27T03:09:18.277Z
 thumbnail: /images/uploads/acoustic-guitar.webp
+title: Buying Your First Guitar
+metaTitle: Buying Your First Guitar
+date: 2023-05-27T18:13:09.830Z
+featuredImage: /images/uploads/acoustic-guitar.webp
+imageAlt: An acoustic guitar next to steps.
+description: Buying your first guitar is an exciting and memorable experience,
+  but it can be overwhelming for beginners. Here are a few tips to get you
+  started.
 isFeatured: true
 tags:
   - guitar
@@ -13,9 +19,7 @@ tags:
 image:
   url: ../images/acoustic-guitar.webp
   alt: An acoustic guitar.
-description: Buying your first guitar is an exciting and memorable experience,
-  but it can be overwhelming for beginners. Here are a few tips to get you
-  started.
+category: Guitar
 ---
 
 Buying your first guitar is an exciting and memorable experience. However, with so many different types, brands, and models available, it can be overwhelming for beginners to know where to start. In this article, we'll guide you through the process of buying your first guitar, from deciding on the type of guitar to budgeting and choosing the right size and sound.
