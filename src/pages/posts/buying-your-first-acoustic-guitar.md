@@ -1,7 +1,7 @@
 ---
 layout: blog
-title: Buying Your First Acoustic Guitar
-metaTitle: Buying Your First Acoustic Guitar
+title: Buying Your First Guitar
+metaTitle: Buying Your First Guitar
 date: 2023-05-27T18:34:16.309Z
 featuredImage: /images/uploads/acoustic-guitar.webp
 imageAlt: An acoustic guitar on steps.
