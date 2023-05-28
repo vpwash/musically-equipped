@@ -17,7 +17,7 @@ tags:
   - beginner
   - gear
 image:
-  url: ../images/acoustic-guitar.webp
+  url: ../images/uploads/acoustic-guitar.webp
   alt: An acoustic guitar.
 category: Guitar
 ---
