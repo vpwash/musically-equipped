@@ -4,7 +4,7 @@ title: Buying Your First Guitar
 metaTitle: Buying Your First Guitar
 date: 2023-05-28T00:58:57.509Z
 featuredImage: /images/uploads/acoustic-guitar.webp
-imageAlt: Guitar on steps by a door.
+imageAlt: Guitar on steps by a  blue door.
 description: Buying your first guitar is an exciting and memorable experience.
   However, with so many different types, brands, and models available, it can be
   overwhelming for beginners to know where to start.
