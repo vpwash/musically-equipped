@@ -1,5 +1,5 @@
 ---
-layout: ../../layouts/BlogPost.astro
+layout: ../../layouts/PostLayout.astro
 title: Buying Your First Guitar
 metaTitle: Buying Your First Guitar
 date: 2023-05-28T00:58:57.509Z
