@@ -2,8 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import Card from '../components/Card.astro';
-let res = await fetch('https://contentmedia.dev/wp-json/wp/v2/posts?_embed');
-let posts = await res.json();
+const posts = await Astro.glob('../pages/post/*.md')
 ---
 
 <Layout metaTitle='Blog | Musically Equipped'>
@@ -14,13 +13,12 @@ let posts = await res.json();
       {
         posts.map((post) => (
           <Card
-            title={post.title.rendered}
+            title={post.frontmatter.title}
             image={
-              post._embedded['wp:featuredmedia'][0].media_details.sizes
-                .medium_large.source_url
+              post.frontmatter.thumbnail
             }
-            url={`/posts/${post.slug}/`}
-            description={post.excerpt.rendered}
+            url={post.url}
+            description={post.frontmatter.description}
           />
         ))
       }
