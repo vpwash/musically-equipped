@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: ../../layouts/BlogPost.astro
 title: Buying Your First Guitar
 metaTitle: Buying Your First Guitar
 date: 2023-05-28T00:58:57.509Z
@@ -11,6 +11,7 @@ description: Buying your first guitar is an exciting and memorable experience.
 isFeatured: true
 category: Guitar
 ---
+
 Buying your first guitar is an exciting and memorable experience. However, with so many different types, brands, and models available, it can be overwhelming for beginners to know where to start. In this article, we'll guide you through the process of buying your first guitar, from deciding on the type of guitar to budgeting and choosing the right size and sound.
 
 ## Types of Guitars
