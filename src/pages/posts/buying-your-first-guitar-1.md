@@ -2,16 +2,15 @@
 layout: ../../layouts/PostLayout.astro
 title: Buying Your First Guitar
 metaTitle: Buying Your First Guitar
-date: 2023-05-27T19:10:53.210Z
+date: 2023-05-28T00:14:32.107Z
 featuredImage: /images/uploads/acoustic-guitar.webp
-imageAlt: An acoustic guitar by a door.
+imageAlt: Guitar on steps by a door.
 description: Buying your first guitar is an exciting and memorable experience.
   However, with so many different types, brands, and models available, it can be
   overwhelming for beginners to know where to start.
 isFeatured: true
 category: Guitar
 ---
-
 Buying your first guitar is an exciting and memorable experience. However, with so many different types, brands, and models available, it can be overwhelming for beginners to know where to start. In this article, we'll guide you through the process of buying your first guitar, from deciding on the type of guitar to budgeting and choosing the right size and sound.
 
 ## Types of Guitars
