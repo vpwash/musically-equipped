@@ -1,0 +1,21 @@
+---
+import Card from '../components/Card.astro';
+
+const posts = await Astro.glob('../pages/posts/*.md');
+const featuredPosts = posts.filter((post) => post.frontmatter.isFeatured);
+---
+
+<div
+  class='container mx-auto my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-between'
+>
+  {
+    featuredPosts.map((post) => (
+      <Card
+        title={post.frontmatter.title}
+        image={post.frontmatter.thumbnail}
+        url={post.url}
+        description={post.frontmatter.description}
+      />
+    ))
+  }
+</div>

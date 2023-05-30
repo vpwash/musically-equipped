@@ -33,6 +33,12 @@ collections:
         }
       - { label: 'Image Alt', name: 'imageAlt', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: 'Featured Post', name: 'isFeatured', widget: 'boolean', required: false }
+      - {
+          label: 'Featured Post',
+          name: 'isFeatured',
+          widget: 'boolean',
+          required: false,
+        }
       - { label: 'Category', name: 'category', widget: 'string' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Body', name: 'body', widget: 'markdown' }

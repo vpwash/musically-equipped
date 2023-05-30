@@ -1,9 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import gearImage from '../images/keyboards.webp';
-import Card from '../components/Card.astro';
 
 import Hero from '../components/Hero.astro';
+import FeaturedPosts from '../components/FeaturedPosts.astro';
 let res = await fetch('https://contentmedia.dev/wp-json/wp/v2/posts?_embed');
 let posts = await res.json();
 ---
@@ -32,21 +32,7 @@ let posts = await res.json();
   </section>
   <section id='featured-post'>
     <section>
-      <div class='container flex flex-col md:flex-row mx-auto my-10 space-x-5'>
-        {
-          posts.map((post) => (
-            <Card
-              title={post.title.rendered}
-              image={
-                post._embedded['wp:featuredmedia'][0].media_details.sizes
-                  .medium_large.source_url
-              }
-              url={`/posts/${post.slug}/`}
-              description={post.excerpt.rendered}
-            />
-          ))
-        }
-      </div>
+      <FeaturedPosts />
     </section>
   </section>
 </Layout>
