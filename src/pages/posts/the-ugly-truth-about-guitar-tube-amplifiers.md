@@ -10,6 +10,10 @@ description: Guitar tube amplifiers are a hot topic of debate among guitarists.
   the truth?
 isFeatured: true
 category: Amplifiers
+tags:
+  - Amplifier
+  - Gear
+  - Analog
 ---
 Guitar tube amplifiers are a hot topic of debate among guitarists. Some swear by them, while others think they're a waste of money. But what's the truth?
 
