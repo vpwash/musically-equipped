@@ -1,21 +1,21 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const posts = await Astro.glob('../pages/posts/*.md');
 const { frontmatter } = Astro.props;
 ---
 
 <Layout title={frontmatter.title} metaTitle={frontmatter.metaTitle}>
-  <section
-    class='flex flex-col container py-10 px-10 md:prose-xl mx-auto prose'
-  >
+  <section class='flex flex-col container py-10 px-10 mx-auto prose prose-lg'>
     <img
       class='rounded-md md:w-lg'
       src={frontmatter.thumbnail}
       alt={frontmatter.imageAlt}
     />
-    <h1 class='text-yellow-500 font-bold text-3xl md:text-5xl py-10'>
+    <h1 class='text-yellow-500 mb-2'>
       {frontmatter.title}
     </h1>
-
+    <hr class='font-semi-bold mt-0' />
     <slot />
   </section>
 </Layout>
