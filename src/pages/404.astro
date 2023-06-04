@@ -1,0 +1,15 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import errorImage from '../images/Capture.webp';
+---
+
+<Layout metaTitle='404 Error Page'>
+  <Hero title='404' />
+  <div class='conatainer mx-auto flex flex-col space-y-10 items-center'>
+    <h2 class='text-center text-yellow-500 text-5xl font-bold my-10'>
+      Hmm... this probably isn't what you're looking for.
+    </h2>
+    <img src={errorImage} alt='' />
+  </div>
+</Layout>
